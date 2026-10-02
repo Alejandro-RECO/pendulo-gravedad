@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+resultados/solo5/
+
+# Evidencias fotográficas (van en el informe, no en el repositorio)
+datos/evidencias/
+
+# Archivos generados: se recrean con analizar.py, la ventana o exportar_excel.py
+resultados/
+*.xlsx
+.pytest_cache/

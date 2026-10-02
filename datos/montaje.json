@@ -1,0 +1,75 @@
+{
+  "fecha_medicion": "2026-10-01",
+  "archivo_datos": "datos/2026-10-01_pendulo_crudo.csv",
+  "longitudes_excluidas_m": [
+    0.9,
+    0.7
+  ],
+  "n_oscilaciones": 10,
+  "amplitud_grados": 9.0,
+  "u_amplitud_grados": 1.0,
+  "masa_kg": 0.013,
+  "u_masa_kg": 0.001,
+  "circunferencia_esfera_m": 0.08,
+  "radio_esfera_m": 0.01273,
+  "u_radio_esfera_m": 0.0003,
+  "u_L_m": 0.003,
+  "resolucion_cronometro_s": 0.01,
+  "g_referencia": 9.773,
+  "notas": {
+    "radio_esfera_m": "Circunferencia medida con cinta de costura C = 8 cm (1 oct 2026); R = C/(2*pi) = 1,27 cm, D = 2,55 cm. u(R) ~ 0,3 mm por u(C) ~ 2 mm.",
+    "u_L_m": "Incertidumbre efectiva de la longitud: resolucion de la cinta de costura (0,5 mm, mitad de la division minima) mas la dificultad de ubicar el centro de la pelota.",
+    "amplitud_grados": "Transportador digital del celular; referencia vertical 90,0 grados, soltado a 9 grados de la vertical.",
+    "g_referencia": "Gravedad normal GRS80 en Bogota (lat 4,7110 grados, h ~ 2640 m) con correccion de aire libre.",
+    "longitudes_excluidas_m": "Decision del grupo (1 oct 2026): se excluyen del ajuste las longitudes con repeticiones incompletas (0,90 y 0,70 m: 2 de 3, sin captura de una serie). El criterio es el numero de repeticiones, no el resultado. Sus datos siguen en el CSV y se usan solo para validar la prediccion del modelo.",
+    "g_clase": "Valor de g usado en clase; la aplicación reporta también el error frente a él."
+  },
+  "g_clase": 9.8,
+  "instrumentos": [
+    {
+      "instrumento": "Cinta métrica de costura (analógica)",
+      "magnitud": "L",
+      "rango": "0–150 cm",
+      "resolucion": "1 mm",
+      "u_instrumento": "±0,5 mm",
+      "u_efectiva": "±3 mm",
+      "justificacion": "Ubicar a ojo el centro de la pelota, cinta flexible y paralaje"
+    },
+    {
+      "instrumento": "Cronómetro del celular (digital, con vueltas)",
+      "magnitud": "t",
+      "rango": "—",
+      "resolucion": "0,01 s",
+      "u_instrumento": "±0,01 s",
+      "u_efectiva": "±0,06 s por lectura",
+      "justificacion": "Tiempo de reacción, medido con la dispersión de las 150 vueltas"
+    },
+    {
+      "instrumento": "Transportador digital del celular",
+      "magnitud": "θ0",
+      "rango": "0–180°",
+      "resolucion": "0,1°",
+      "u_instrumento": "±0,1°",
+      "u_efectiva": "±1°",
+      "justificacion": "Alinear el celular con el hilo a mano"
+    },
+    {
+      "instrumento": "Balanza digital SF-400",
+      "magnitud": "m",
+      "rango": "0–10 kg",
+      "resolucion": "1 g",
+      "u_instrumento": "±1 g",
+      "u_efectiva": "±1 g",
+      "justificacion": "La masa no entra en el cálculo de g"
+    },
+    {
+      "instrumento": "Cinta métrica (circunferencia de la pelota)",
+      "magnitud": "C → R",
+      "rango": "—",
+      "resolucion": "1 mm",
+      "u_instrumento": "±0,5 mm",
+      "u_efectiva": "±2 mm en C",
+      "justificacion": "R = C/2π = (1,27 ± 0,03) cm"
+    }
+  ]
+}
