@@ -10,3 +10,8 @@ datos/evidencias/
 resultados/
 *.xlsx
 .pytest_cache/
+
+# Documentos del grupo y de la transcripción: se quedan en el equipo, no en GitHub
+PARA_EL_DESARROLLADOR.md
+datos/README.md
+datos/transcripcion_fotos.py

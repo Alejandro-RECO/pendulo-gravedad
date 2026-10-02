@@ -7,7 +7,7 @@ Integrantes: Camacho Yamith, Matoma Laudy, Revolledo Luis, Sosa Deisy. Docente: 
 oscilación de un péndulo simple con su longitud, y qué diferencia porcentual presenta frente al
 valor de referencia local (9,773 m/s²)?
 
-## Qué hace (respuesta a la observación del corte 1)
+## Qué hace
 
 | | |
 |---|---|
@@ -16,8 +16,6 @@ valor de referencia local (9,773 m/s²)?
 | **Procesamiento** | 1) T = t₁₀/10 por serie · 2) promedio e incertidumbre por longitud · 3) mínimos cuadrados **implementados a mano** de T² vs L · 4) g = 4π²/m con propagación en cuadratura · 5) error % frente a 9,773 m/s² · 6) corrección por amplitud (9°) y por tamaño de la pelota · 7) simulación RK4 de la ecuación exacta. |
 | **Salida** | `resultados/`: `reporte.md` (tablas y resultados), `tabla_longitudes.csv`, `resumen.json` y cuatro figuras listas para el informe. |
 | **Validación** | `validar.py`: ajuste propio vs `numpy.polyfit`; predicción del periodo en 0,70 y 0,90 m, que no entran en el ajuste, y en 0,60 m dejándola fuera; simulador vs solución exacta; coherencia de los datos crudos. |
-
-> **¿Vas a desarrollar o modificar la aplicación?** Lee primero [`PARA_EL_DESARROLLADOR.md`](PARA_EL_DESARROLLADOR.md): están las decisiones del grupo y los valores que el programa debe reproducir.
 
 ## Interfaz gráfica
 
@@ -48,9 +46,6 @@ python analizar.py --todas    # comparación: sin excluir ninguna longitud -> re
 datos/
   2026-10-01_pendulo_crudo.csv   datos crudos transcritos de las capturas del cronómetro (no se editan a mano)
   montaje.json                   longitud de incertidumbre, amplitud, radio de la pelota, g de referencia
-  transcripcion_fotos.py         script que generó el CSV a partir de la lectura de las capturas
-  README.md                      procedencia de cada dato y series faltantes
-  (las fotos y capturas del cronómetro son evidencias del informe; no se publican aquí)
 pendulo/
   datos.py         lectura del CSV y agrupación por serie y por longitud
   estadistica.py   mínimos cuadrados (con y sin intercepto), desviación combinada, propagación
@@ -58,14 +53,16 @@ pendulo/
   simulacion.py    integración RK4 de θ'' = −(g/L) sen θ y medición del periodo
   analisis.py      el procesamiento completo
   graficas.py      figuras del informe con coma decimal
-analizar.py        programa principal
+  graficas_app.py  gráficas de la interfaz (tiempo en el eje x)
+ventana.pyw        interfaz gráfica
+iniciar_app.bat    abre la interfaz con doble clic
+analizar.py        procesamiento por consola: genera resultados/
 validar.py         validación del producto
+exportar_excel.py  exporta datos y ajuste a Excel con fórmulas
 ```
 
 ## Modelo
 
-| # | Ecuación | Uso |
-|---|---|---|
 Numeración del informe del corte 2:
 
 | # | Ecuación | Uso |
